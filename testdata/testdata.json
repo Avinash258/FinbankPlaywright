@@ -1,0 +1,35 @@
+{
+  "users": {
+    "valid": {
+      "email": "demo@fintech.com",
+      "password": "demo123",
+      "firstName": "Alex",
+      "lastName": "Morgan",
+      "fullName": "Alex Morgan",
+      "kycStatus": "verified"
+    },
+    "invalid": {
+      "email": "bad@example.com",
+      "password": "wrong"
+    }
+  },
+  "accounts": {
+    "primaryChecking": "Primary Checking",
+    "highYieldSavings": "High-Yield Savings",
+    "investmentAccount": "Investment Account"
+  },
+  "investments": {
+    "symbols": ["MSFT", "AAPL"]
+  },
+  "cards": {
+    "rewardsCredit": "Rewards Credit"
+  },
+  "api": {
+    "endpoints": {
+      "login": "/api/auth/login",
+      "me": "/api/auth/me",
+      "accounts": "/api/accounts/accounts",
+      "portfolio": "/api/investments/portfolio"
+    }
+  }
+}

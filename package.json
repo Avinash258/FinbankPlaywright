@@ -1,0 +1,27 @@
+{
+  "name": "finbankproject",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for FinVault Digital Banking",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui-mode": "playwright test --ui",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "test:shard": "node scripts/run-shard.js",
+    "test:merge-report": "playwright merge-reports --reporter html ./blob-report",
+    "test:report": "playwright show-report",
+    "test:debug": "playwright test --debug",
+    "test:list": "playwright test --list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.23.0",
+    "typescript": "^7.0.2"
+  }
+}
