@@ -1,8 +1,7 @@
 import testDataJson from '../testdata/testdata.json';
+import type { TestData } from '../types/test-data.types';
 
-export type TestData = typeof testDataJson;
-
-const testData: TestData = structuredClone(testDataJson);
+const testData: TestData = structuredClone(testDataJson as TestData);
 
 if (process.env.DEMO_EMAIL) {
   testData.users.valid.email = process.env.DEMO_EMAIL;
@@ -17,14 +16,16 @@ export function getTestData(): TestData {
 }
 
 export const credentials = {
-  get email() {
+  get email(): string {
     return testData.users.valid.email;
   },
-  get password() {
+  get password(): string {
     return testData.users.valid.password;
   },
 };
 
-export function getDemoUser() {
+export function getDemoUser(): TestData['users']['valid'] {
   return testData.users.valid;
 }
+
+export type { TestData } from '../types/test-data.types';

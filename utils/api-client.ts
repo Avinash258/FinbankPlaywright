@@ -1,21 +1,8 @@
 import { type APIRequestContext } from '@playwright/test';
+import type { AuthUser, LoginResponse } from '../types/test-data.types';
 import { credentials, getTestData } from './load-test-data';
 
-export type AuthUser = {
-  id: string;
-  email: string;
-  firstName: string;
-  lastName: string;
-  phone: string;
-  avatar: string;
-  memberSince: string;
-  kycStatus: string;
-};
-
-export type LoginResponse = {
-  token: string;
-  user: AuthUser;
-};
+export type { AuthUser, LoginResponse } from '../types/test-data.types';
 
 export class FinVaultApiClient {
   private token?: string;

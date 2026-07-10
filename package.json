@@ -8,11 +8,12 @@
     "test:ui-mode": "playwright test --ui",
     "test:ui": "playwright test --project=ui",
     "test:api": "playwright test --project=api",
-    "test:shard": "node scripts/run-shard.js",
+    "test:shard": "tsx scripts/run-shard.ts",
     "test:merge-report": "playwright merge-reports --reporter html ./blob-report",
     "test:report": "playwright show-report",
     "test:debug": "playwright test --debug",
-    "test:list": "playwright test --list"
+    "test:list": "playwright test --list",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
     "dotenv": "^17.4.2",
     "tsx": "^4.23.0",
     "typescript": "^7.0.2"

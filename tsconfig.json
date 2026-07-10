@@ -2,19 +2,20 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "commonjs",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "baseUrl": ".",
+    "types": ["node"],
     "paths": {
-      "@pages/*": ["pages/*"],
-      "@fixtures/*": ["fixtures/*"],
-      "@utils/*": ["utils/*"],
-      "@components/*": ["components/*"]
+      "@pages/*": ["./pages/*"],
+      "@fixtures/*": ["./fixtures/*"],
+      "@utils/*": ["./utils/*"],
+      "@components/*": ["./components/*"],
+      "@types/*": ["./types/*"]
     }
   },
   "include": ["**/*.ts"],

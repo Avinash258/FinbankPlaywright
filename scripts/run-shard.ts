@@ -1,16 +1,17 @@
-#!/usr/bin/env node
-'use strict';
-
-const { spawnSync } = require('node:child_process');
+import { spawnSync } from 'node:child_process';
 
 const shardIndex = process.argv[2];
 const shardTotal = process.argv[3];
 const extraArgs = process.argv.slice(4);
 
-if (!shardIndex || !shardTotal) {
+function printUsage(): void {
   console.error('Usage: npm run test:shard -- <index> <total> [-- project flags]');
   console.error('Example: npm run test:shard -- 1 4');
   console.error('Example: npm run test:shard -- 2 4 -- --project=ui');
+}
+
+if (!shardIndex || !shardTotal) {
+  printUsage();
   process.exit(1);
 }
 

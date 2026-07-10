@@ -2,7 +2,7 @@ import { type Locator, type Page } from '@playwright/test';
 import { ROUTES } from '../utils/constants';
 
 export class LoginPage {
-  constructor(private readonly page: Page) {}
+  constructor(public readonly page: Page) {}
 
   get emailInput(): Locator {
     return this.page.locator('input[type="email"]');

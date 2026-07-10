@@ -3,7 +3,7 @@ import { type Locator, type Page } from '@playwright/test';
 import { credentials } from '../utils/load-test-data';
 
 export abstract class BasePage {
-  constructor(protected readonly page: Page) {}
+  constructor(public readonly page: Page) {}
 
   get signOutButton(): Locator {
     return this.page.getByRole('button', { name: /sign out/i });

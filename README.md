@@ -88,8 +88,10 @@ FinBankProject/
 │   ├── load-test-data.ts      # JSON loader with env overrides
 │   ├── api-client.ts          # Typed API helper
 │   └── constants.ts           # Routes and nav labels
+├── types/
+│   └── test-data.types.ts     # Shared TypeScript types
 ├── scripts/
-│   └── run-shard.js           # Cross-platform shard runner
+│   └── run-shard.ts           # Cross-platform shard runner (TypeScript)
 ├── playwright.config.ts
 └── .github/workflows/         # CI with 4-way sharding
 ```
@@ -105,6 +107,7 @@ FinBankProject/
 | `npm run test:ui-mode` | Playwright interactive UI mode |
 | `npm run test:debug` | Step-through debugger |
 | `npm run test:report` | Open last HTML report |
+| `npm run typecheck` | Run TypeScript compiler checks |
 
 ## Sharding
 
