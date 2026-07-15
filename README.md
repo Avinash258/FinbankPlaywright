@@ -4,7 +4,7 @@ End-to-end and API test automation for [FinVault Digital Banking](https://sole-v
 
 ## Features
 
-- **UI tests** — login, dashboard, accounts, transactions, transfers, investments, cards, profile, and navigation
+- **UI tests** — login, dashboard, accounts, transactions, transfers, investments, cards, profile, and navigation.
 - **API tests** — auth, accounts, and investments endpoints
 - **Page Object Model** with custom fixtures for maintainable tests
 - **JSON test data** — centralized credentials and assertions in `testdata/testdata.json`
